@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { changeSelectedMachine } from './../../../actions/actionCreator.js';
@@ -27,6 +27,11 @@ const StyleSection = styled.section`
 `;
 
 const SelectMachine = ({ machines, selectedMachine, dispatch }) => {
+    useEffect(() => {
+        return () => {
+            dispatch(changeSelectedMachine('-'));
+        }
+    })
     const machineList = machines.map(element => element.number)
     machineList.unshift('-');
     const handleChange = e => {
