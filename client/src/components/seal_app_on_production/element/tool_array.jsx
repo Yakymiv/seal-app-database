@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 const ArrayTool = ({ sealapps, machine, dispatch }) => {
     const handleClick = (id) => {
-        fetch(`http://localhost:5000/sealapp?id=${id}`, {
+        fetch(`/sealapp?id=${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

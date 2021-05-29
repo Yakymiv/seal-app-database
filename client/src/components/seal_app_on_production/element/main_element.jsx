@@ -19,8 +19,8 @@ const StyleArticle = styled.article`
 const Element = ({machines, dispatch}) => {
     useEffect(() => {
         Promise.all([
-            fetch('http://localhost:5000/machine').then(response => response.json()),
-            fetch('http://localhost:5000/sealapp').then(response => response.json())
+            fetch('/machine').then(response => response.json()),
+            fetch('/sealapp').then(response => response.json())
         ]).then(data => {
             dispatch(addMachines(data[0]));
             dispatch(addSealapps(data[1]));

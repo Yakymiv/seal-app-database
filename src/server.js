@@ -14,7 +14,7 @@ const app = express();
 
 app.use(bodyParser.json())
 
-const publicDirectoryPath = path.join(__dirname, '../../client/build/');
+const publicDirectoryPath = path.join(__dirname, '../client/build/');
 app.use(express.static(publicDirectoryPath));
 app.use(cors());
 

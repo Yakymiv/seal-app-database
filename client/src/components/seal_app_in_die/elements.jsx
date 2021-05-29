@@ -14,8 +14,8 @@ const StyledSection = styled.section`
 const Elements = ({ dispatch, sealapps }) => {
     useEffect(() => {
         Promise.all([
-            fetch('http://localhost:5000/machine').then(response => response.json()),
-            fetch('http://localhost:5000/sealapp').then(response => response.json())
+            fetch('/machine').then(response => response.json()),
+            fetch('/sealapp').then(response => response.json())
         ]).then(data => {
             dispatch(addMachines(data[0]));
             dispatch(addSealapps(data[1]));
