@@ -20,7 +20,7 @@ const StyleFooter = styled.footer`
 const Footer = () => {
     return(
         <StyleFooter id="footer">
-            <span>developer Yakymiv Yaroslav for "ВО Карпати"</span>
+            <span>by Yakymiv Yaroslav</span>
         </StyleFooter>
     );
 }
